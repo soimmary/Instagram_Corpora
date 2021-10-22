@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Главная страница</title>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+      <!-- Option 2: jQuery, Popper.js, and Bootstrap JS-->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+   </head>
+   <body>
+      <!-- https://getbootstrap.com/docs/4.5/components/navbar/ -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+               <a class="nav-link" href="/" style="font-size: 20pt;">Главная</a>
+            </div>
+         </div>
+      </nav>
+      <form action="/process" method = 'GET'>
+         <fieldset>
+            <legend>
+               <br>
+               <b>
+                  <div class="mx-auto" style="width: 1100px; font-size: 70pt;">
+                     <p class="text-primary"><font color="FF78FF">✨ Instagram Corpora ✨</font></p>
+                  </div>
+               </b>
+            </legend>
+            <p>
+            <div class="mx-auto" style="width: 1100px; font-size: 17pt;">
+               <center>Корпус текстов из Instagram.</center>
+               <center>Для поиска введите свой запрос в строке "Поиск" и нажмите <b>Enter</b>.</center>
+               <p>
+            </div>
+            </p>
+            <br>
+         </fieldset>
+         <div class="input-group input-group-lg mx-auto" style="width: 1200px;">
+            <span class="input-group-text" id="inputGroup-sizing-lg" style="font-size: 15pt;">Поиск</span>
+            <input type="text" name="user_request" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+         </div>
+         <div class="mx-auto" style="width: 1100px; font-size: 14pt;">
+            <p></p>
+            <p><b>Запросы могут состоять из:</b>
+            <p>📍 леммы</p>
+            <p>📍 токена в двойных кавычках</p>
+            <p>📍 POS-тега</p>
+            <p>📍 всего вышеперечисленного вперемешку</p>
+            <p><b>Список POS-тегов:</b>
+            <table class="table table-striped" border="1" class="docutils">
+               <colgroup>
+                  <col width="14%" />
+                  <col width="40%" />
+                  <col width="40%" />
+               </colgroup>
+               <thead valign="bottom">
+                  <tr class="row-odd">
+                     <th class="head">Граммема</th>
+                     <th class="head">Значение</th>
+                     <th class="head">Примеры</th>
+                  </tr>
+               </thead>
+               <tbody valign="top">
+                  <tr class="row-even">
+                     <td>NOUN</td>
+                     <td>имя существительное</td>
+                     <td>хомяк</td>
+                  </tr>
+                  <tr class="row-odd">
+                     <td>ADJ</td>
+                     <td>имя прилагательное (полное/краткое)</td>
+                     <td>хороший</td>
+                  </tr>
+                  <tr class="row-odd">
+                     <td>COMP</td>
+                     <td>компаратив</td>
+                     <td>лучше, получше, выше</td>
+                  </tr>
+                  <tr class="row-even">
+                     <td>VERB</td>
+                     <td>глагол (личная форма)</td>
+                     <td>говорю, говорит, говорил</td>
+                  </tr>
+                  <tr class="row-odd">
+                     <td>INFN</td>
+                     <td>глагол (инфинитив)</td>
+                     <td>говорить, сказать</td>
+                  </tr>
+                  <tr class="row-even">
+                     <td>PRTF</td>
+                     <td>причастие (полное)</td>
+                     <td>прочитавший, прочитанная</td>
+                  </tr>
+                  <tr class="row-odd">
+                     <td>PRTS</td>
+                     <td>причастие (краткое)</td>
+                     <td>прочитана</td>
+                  </tr>
+                  <tr class="row-even">
+                     <td>GRND</td>
+                     <td>деепричастие</td>
+                     <td>прочитав, рассказывая</td>
+                  </tr>
+                  <tr class="row-odd">
+                     <td>NUMR</td>
+                     <td>числительное</td>
+                     <td>три, пятьдесят</td>
+                  </tr>
+                  <tr class="row-even">
+                     <td>ADVB</td>
+                     <td>наречие</td>
+                     <td>круто</td>
+                  </tr>
+                  <tr class="row-odd">
+                     <td>NPRO</td>
+                     <td>местоимение-существительное</td>
+                     <td>он</td>
+                  </tr>
+                  <tr class="row-even">
+                     <td>PRED</td>
+                     <td>предикатив</td>
+                     <td>некогда</td>
+                  </tr>
+                  <tr class="row-odd">
+                     <td>PREP</td>
+                     <td>предлог</td>
+                     <td>в</td>
+                  </tr>
+                  <tr class="row-even">
+                     <td>CONJ</td>
+                     <td>союз</td>
+                     <td>и</td>
+                  </tr>
+                  <tr class="row-odd">
+                     <td>PRCL</td>
+                     <td>частица</td>
+                     <td>бы, же, лишь</td>
+                  </tr>
+                  <tr class="row-even">
+                     <td>INTJ</td>
+                     <td>междометие</td>
+                     <td>ой</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <br>
+      </form>
+</html>
